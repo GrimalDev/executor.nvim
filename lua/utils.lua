@@ -3,6 +3,7 @@ local M = {}
 ---@class ExecutorOptions
 ---@field commands table commands for each filetype
 ---@field default_mappings boolean weather to define default mappings
+---@field notify boolean weather not to use the notify api
 ---@field always_exit boolean always append `|| exit` to command
 ---@field insert_on_enter boolean enter insert mode when spawning a new terminal
 ---@field dependency_commands table commands that require a dependency file
@@ -31,6 +32,7 @@ M.default_opts = {
 		},
 	},
 	default_mappings = true,
+	notify = false,
 	always_exit = true, -- always exit terminal no matter status of previous command
 	insert_on_enter = false, -- enter insert mode on entering a terminal
 	dependency_commands = {

@@ -50,7 +50,9 @@ function M.executor()
 
 		-- if not external terminal, run command as a vim command
 		if commandTbl.extern == false then
-			vim.notify(command)
+			if settings.notify == true then
+				vim.notify(command)
+			end
 			vim.cmd(command)
 			-- stop after command has been excuted
 			return

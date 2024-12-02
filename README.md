@@ -58,15 +58,15 @@ Executor comes with the following defaults:
         }
 
     },
-     default_mappings = true, -- use default mapping
+    default_mappings = true, -- use default mapping
+    notify = true -- Use the notify api
     always_exit = true, -- always exit terminal no matter status of previous
-    command
-
-     dependency_commands = {
-         -- the command make requires the presents of a makefile in cwd, if
-         -- makefile is not found, try next command in table
-         make = "makefile"
-     }
+	insert_on_enter = false, -- enter insert mode on entering a terminal
+    dependency_commands = {
+        -- the command make requires the presents of a makefile in cwd, if
+        -- makefile is not found, try next command in table
+        make = "makefile"
+    }
 }
 ```
 
